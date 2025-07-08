@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Church Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url(''); /* Update with the correct path of your background image */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: rgb(14, 14, 17);
+      color: white;
+      padding: 20px 0;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header img {
+      width: 90px;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      position: sticky;
+    }
+
+    nav a {
+      text-decoration: text-decoration-thickness;
+      color: rgb(243, 228, 16);
+      font-weight: bold;
+      padding: 10px 15px;
+      border: 2px solid blue;
+      border-radius: 5px;
+      background-color: transparent;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: blue;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 40px 0;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    footer .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    footer .social-icon {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    footer .social-icon:hover {
+      transform: scale(1.2);
+    }
+
+    /* Dropdown button style */
+    .dropdown-btn {
+      background-color: transparent;
+      border: none;
+      color: rgb(54, 240, 7);
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-btn:hover {
+      background-color: rgb(5, 224, 53);
+      color: black;
+    }
+
+    .dropdown-content {
+      display: none;
+      margin-top: 15px;
+      background-color: rgba(37, 223, 83, 0.7);
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .dropdown-content p {
+      margin-bottom: 15px;
+    }
+
+    .dropdown-content ul {
+      list-style: none;
+    }
+
+    .dropdown-content ul li {
+      margin-bottom: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  style "background: url('images/daniel.jpg');">
+>
+  <header>
+    <div class="container">
+      <!-- Logo -->
+      <img src="C:\Users\Student\Desktop\erick websie project\download.png" alt="Church Logo">
+      <h1>Welcome to PEFA cathedral Dandora</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#Letsconnect">Lets connect</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#Give">Give</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+  <section id="home">
+    <div class="container">
+      <button class="dropdown-btn" onclick="toggleContent('missionContent')">Our Mission</button>
+      <div id="missionContent" class="dropdown-content">
+        <p>We are a community of believers dedicated to serving God and others. Join us for Sunday services and various activities!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <button class="dropdown-btn" onclick="toggleContent('aboutContent')">About Us</button>
+      <div id="aboutContent" class="dropdown-content">
+        <p>We are a welcoming and inclusive church. Our mission is to spread love, hope, and faith through service, worship, and community involvement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <div class="container">
+      <button class="dropdown-btn" onclick="toggleContent('locationContent')">Location</button>
+      <div id="locationContent" class="dropdown-content">
+        <p>We are located in Dandora Phase 1.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="Lets connect">
+    <div class="container">
+      <button class="dropdown-btn" onclick="toggleContent('connectContent')">Let's Connect</button>
+      <div id="connectContent" class="dropdown-content">
+        <p>We are a community of believers dedicated to serving God and others. Join us for Sunday services and various activities!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="Give">
+    <div class="container">
+      <button class="dropdown-btn" onclick="toggleContent('giveContent')">Give</button>
+      <div id="giveContent" class="dropdown-content">
+        <p>Channel Tithes and Offering via pay bill 59801.</p>
+        <p><em>"Each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver." - 2 Corinthians 9:7</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <button class="dropdown-btn" onclick="toggleContent('servicesContent')">Our Services</button>
+      <div id="servicesContent" class="dropdown-content">
+        <ul>
+          <li>Sunday Worship: 9:00 AM & 11:00 AM</li>
+          <li>Wednesday Bible Study: 7:00 PM</li>
+          <li>Community Outreach: Saturdays at 10:00 AM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <button class="dropdown-btn" onclick="toggleContent('contactContent')">Contact Us</button>
+      <div id="contactContent" class="dropdown-content">
+        <h2>Contact Information</h2>
+        <p>If you have any questions, feel free to reach out to us:</p>
+        <ul>
+          <li><strong>Email:</strong> contact@church.com</li>
+          <li><strong>Phone:</strong> +123 456 7890</li>
+          <li><strong>Address:</strong> PEFA Cathedral Dandora, Phase 1</li>
+        </ul>
+        <p>Or fill out the form below to get in touch:</p>
+        <form id="contactForm">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+        <div id="formResponse"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Our Church. All Rights Reserved.</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+          <img src="C:\Users\Student\Desktop\erick websie project\fb.jpg" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+          <img src="images/twitter-icon.png" alt="Twitter" class="social-icon">
+        </a>
+        <a href="C:\Users\Student\Desktop\erick websie project\Instagram_logo_2022.svg.png" target="_blank" aria-label="Instagram">
+          <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+          <img src="C:\Users\Student\Desktop\erick websie project\YouTube_full-color_icon_(2017).svg.png" alt="YouTube" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Function to toggle the dropdown content visibility
+    function toggleContent(contentId) {
+      var content = document.getElementById(contentId);
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+

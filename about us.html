@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PEFA Cathedral Dandora</title>
+  <meta name="description" content="PEFA Cathedral Dandora – A welcoming church focused on worship, discipleship, and community service.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #173d7c, #2956a3);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .slider {
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 1s ease-in-out;
+    }
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-size: 1rem;
+      max-width: 80%;
+      transition: opacity 1s ease-in-out;
+    }
+
+    section {
+      max-width: 900px;
+      background: white;
+      margin: 30px auto;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      color: #173d7c;
+      margin-bottom: 15px;
+    }
+    h3 {
+      color: #2956a3;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #173d7c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .slider {
+        height: 250px;
+      }
+      .caption {
+        font-size: 0.9rem;
+        left: 15px;
+        right: 15px;
+        bottom: 10px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PEFA Cathedral Dandora</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#give">Give</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="slider">
+    <img id="sliderImage" src="https://source.unsplash.com/1200x400/?church,1" alt="Church Area" />
+    <div class="caption" id="captionText">Main Sanctuary – Where we gather for Sunday services and worship together.</div>
+  </div>
+
+  <section id="home">
+    <h2>Welcome to PEFA Cathedral Dandora</h2>
+    <p>We are a community of believers committed to worship, discipleship, and service. Join us to grow in faith and fellowship.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a welcoming and inclusive church. Our mission is to spread love, hope, and faith through service, worship, and community involvement.</p>
+    <h3>Who Are We</h3>
+    <p>PEFA Cathedral Dandora is a church dedicated to nurturing faith and fostering a close-knit community.</p>
+    <h3>Statement of Faith</h3>
+    <p>We believe in the Bible as the inspired Word of God, the Trinity, salvation through Jesus Christ, and the power of the Holy Spirit.</p>
+    <h3>Journey to Date</h3>
+    <p>From humble beginnings, our church has grown in numbers and spiritual maturity, serving the Dandora community faithfully.</p>
+  </section>
+
+  
+  <footer>
+    <p>&copy; 2025 PEFA Cathedral Dandora | All rights reserved.</p>
+    <p>Email: info@pefadandora.org | Phone: +254 700 000000</p>
+  </footer>
+
+  <script>
+    const images = [
+      "pefa image.jpg",  // Main Sanctuary
+      "baptism-about us image.jpg", // baptism
+      "woship -about us.jpg", // Worship
+      "about us -teens class.jpg", // Teens
+      "word study.jpg" // Fellowship Hall
+    ];
+
+    const descriptions = [
+      "Main Sanctuary – Where we gather for Sunday services and worship together.",
+      "Baptism – Baptism signifies dying to your old life and being reborn in Christ..",
+      "Worship – Through worship, people renew their beliefs and find strength during challenges and uncertainty..",
+      "Teens –Teens are being nurtured to lead and serve with impact.",
+      "Word study – Unquestioned doctrines are being deeply instilled."
+    ];
+
+    let current = 0;
+    const sliderImage = document.getElementById("sliderImage");
+    const captionText = document.getElementById("captionText");
+
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      sliderImage.style.opacity = 0;
+      captionText.style.opacity = 0;
+
+      setTimeout(() => {
+        sliderImage.src = images[current];
+        captionText.textContent = descriptions[current];
+        sliderImage.style.opacity = 1;
+        captionText.style.opacity = 1;
+      }, 500);
+    }, 3000);
+  </script>
+
+</body>
+</html>

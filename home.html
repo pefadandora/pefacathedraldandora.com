@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Transition Example</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+      margin: 0;
+    }
+    img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: opacity 1s ease-in-out;
+      opacity: 1;
+      position: absolute;
+    }
+    .container {
+      position: relative;
+      width: 80vw;
+      height: 60vh;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="slideshow" src="bishop-home image.jpg" alt="Slideshow Image" />
+  </div>
+
+  <script>
+    const images = [
+        
+      "bishop-home image.jpg",
+      "pastor michael.jpg",
+      "praise and worship.jpg",
+      "graduants.jpg",
+      "graduants 2 home.jpg",
+      "home image 2.jpg",
+      "home image 1.jpg",
+  
+    ];
+
+    let currentIndex = 0;
+    const imgElement = document.getElementById("slideshow");
+
+    setInterval(() => {
+      // Fade out
+      imgElement.style.opacity = 0;
+
+      setTimeout(() => {
+        // Change image src after fade out
+        currentIndex = (currentIndex + 1) % images.length;
+        imgElement.src = images[currentIndex];
+        // Fade in
+        imgElement.style.opacity = 1;
+      }, 1000); // wait for fade-out transition (1s)
+    }, 3000); // change image every 3 seconds
+  </script>
+</body>
+</html>

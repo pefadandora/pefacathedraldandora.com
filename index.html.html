@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PEFA Cathedral Dandora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Poppins&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('pefa image.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    header, section, footer {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: saturate(150%) contrast(90%);
+      margin: 10px auto;
+      padding: 30px 5%;
+      max-width: 1100px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(to right, #173d7c, #2956a3);
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+      width: 100%;
+      padding-left: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 12px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+    section h2 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      color: #173d7c;
+      margin-bottom: 15px;
+    }
+
+    section p, section ul li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: 500;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #e4c580;
+      color: #173d7c;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d4b06e;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      background-color: #173d7c;
+      padding: 15px 5%;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icon {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.15);
+    }
+
+    /* Lower Third Banner Animation */
+    #lowerThird {
+      position: fixed;
+      bottom: 40px;
+      white-space: nowrap;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #fff;
+      z-index: 9999;
+      pointer-events: none;
+      animation: moveBanner 12s linear infinite;
+      left: -100%;
+    }
+
+    #lowerThird p {
+      display: inline-block;
+      background: rgba(23, 61, 124, 0.95);
+      padding: 12px 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Slide from left to right across the screen */
+    @keyframes moveBanner {
+      0% {
+        left: -100%;
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      50% {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        left: 100%;
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="download.png" class="logo" />
+    <div>
+      <h1>PEFA Cathedral Dandora</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="Giving.html">Give</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Sections -->
+  <section id="home">
+    <h2>Our Mission</h2>
+    <p>We are a community of believers committed to worship, discipleship, and service. Join us to grow in faith and fellowship.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Sunday Worship:</strong> 
+        FIRST SERVICE 8:00 AM & 9:00 AM
+        SECOND SERVICE 9:00 AM - 11:00 AM
+        THIRD SERVICE 9:00 AM - 11:00 AM
+        </li>
+      <li><strong>Bible Study:</strong> Wednesday at 6:30 PM</li>
+      <li><strong>Community Outreach:</strong> THURSDAY & Saturday at 10:00 AM</li>
+    </ul>
+  </section>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm" action="https://formspree.io/f/mldnpvoo" method="POST">
+    <label for="email">Your email:</label>
+    <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+    <label for="message">Your message:</label>
+    <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+  <div id="thankYouMessage" style="display:none; margin-top:20px; color: green; font-weight: bold;">
+    Thank you for contacting us! We will get back to you shortly.
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const thankYou = document.getElementById('thankYouMessage');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();  // prevent default form submission
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.style.display = 'none';       // hide form
+        thankYou.style.display = 'block';  // show thank you message
+      } else {
+        alert('Oops! There was a problem submitting your form');
+      }
+    } catch (error) {
+      alert('Oops! There was a problem submitting your form');
+    }
+  });
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PEFA Cathedral Dandora. All rights reserved.</p>
+    <div class="social-media">
+      <a href="https://www.facebook.com/pefacathedraldando"><img src="fbook logo.jpg" alt="Facebook" class="social-icon"></a>
+      <a href="https://www.youtube.com/results?search_query=pefa+cathedral+dandora+nairobi"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="social-icon"></a>
+    </div>
+  </footer>
+
+  <!-- Lower Third Banner -->
+  <div id="lowerThird">
+    <p>Empowered by Faith, United in Love — PEFA Cathedral Dandora // MONDAY:HOMECELLS FROM 6:30PM // TUESDAYS : CHOIR PRACTICE 6:30 PM// WEDNESDAY : BIBLE STUDY 6:30PM //THURSDAY : YOUTH SERVICE // FRIDAY :EVENING PRAYERS 6:30PM NIGHT VIGIL 10PM  // THANK YOU</p>
+  </div>
+
+</body>
+</html>
